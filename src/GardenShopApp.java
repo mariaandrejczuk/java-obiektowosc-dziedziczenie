@@ -5,6 +5,8 @@ public class GardenShopApp {
         Scanner scanner = new Scanner(System.in, "UTF-8");
         int option;
         GardenShop gardenShop = new GardenShop(); //przygotowujemy sklep
+        String name;
+        double price; //dodajemy tu dwie zmienne które powtarzają się w case 1 (kwiaty) i case 2 (nawozy)
 
         do {
             System.out.println("----------Garden Shop -----------");
@@ -18,10 +20,10 @@ public class GardenShopApp {
             switch (option) {
                 case 1:
                     System.out.println("Name: ");
-                    String name = scanner.nextLine();
+                    name = scanner.nextLine();
 
                     System.out.println("Price: ");
-                    double price = scanner.nextDouble();
+                    price = scanner.nextDouble();
                     scanner.nextLine(); //bo inaczej nie przechwytuje białego znaku i nie pyta o Type
 
                     System.out.println("Type: ");
@@ -31,11 +33,21 @@ public class GardenShopApp {
                     gardenShop.addFlower(flower); //na gardenShop wywołujemy metodę addFlower, dzięi temu kwiat trafia do tablicy flowers z Klasy GardenShop
 
                     break;
-                case 2:
+                case 2: //nawóz - ma to samo co kwiat, czyli name, price, a dodatkowo przeznaczenie.
+                    System.out.println("Name: ");
+                    name = scanner.nextLine();
 
+                    System.out.println("Price: ");
+                    price = scanner.nextDouble();
+                    scanner.nextLine(); //bo inaczej nie przechwytuje białego znaku i nie pyta o Type
+
+                    System.out.println("Purpose: ");
+                    String purpose = scanner.nextLine();
+
+                    Fertilizer fertilizer = new Fertilizer(name, price, purpose); //tworzymy obiekt nawóz
+                    gardenShop.addFertilizer(fertilizer); //i dodajemy metodą addF nawóz do sklepu gardenShop
                     break;
                 case 3:
-
                     gardenShop.displayAll();
                     break;
 
