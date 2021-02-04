@@ -8,4 +8,12 @@ public class Product { //w strukturze sklepu można wyodrębnic coś bardziej og
         this.name = name;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

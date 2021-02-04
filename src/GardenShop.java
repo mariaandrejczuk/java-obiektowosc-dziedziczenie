@@ -1,3 +1,4 @@
+import java.util.concurrent.Flow;
 
 public class GardenShop {
 
@@ -13,7 +14,11 @@ public class GardenShop {
 
     public void displayAll() {
         for (int i = 0; i < flowerIndex; i++) {
-            flowers[i].display();
+            //flowers[i].display();
+            Flower flower = flowers[i];
+            System.out.println("Name: "+flower.getName());
+            System.out.println("Price: "+flower.getPrice());
+            System.out.println("Type: "+flower.getType());
         }
         for (int i = 0; i < fertilizerIndex; i++) {
             fertilizers[i].display();
