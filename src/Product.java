@@ -4,7 +4,7 @@ public class Product { //w strukturze sklepu można wyodrębnic coś bardziej og
     private String name;
     private double price;
 
-    public Product(String name, double price) {  // 
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }

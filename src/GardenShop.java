@@ -9,24 +9,32 @@ public class GardenShop {
     private int fertilizerIndex = 0;
 
     public void addFlower(Flower flower) {   //metoda
-        flowers[flowerIndex++] = flower; // przypisz flower, flowerIndex++ ->zeby kolejny kwiat w tablicy flowers dodawany otrzymywał kolejny indeks)
+        if (flowerIndex < flowers.length) {
+            flowers[flowerIndex++] = flower; // przypisz flower, flowerIndex++ ->zeby kolejny kwiat w tablicy flowers dodawany otrzymywał kolejny indeks)
+        }
+    }
+
+    public void addFertilizer(Fertilizer fertilizer) {
+        if (fertilizerIndex < fertilizers.length) {
+            fertilizers[fertilizerIndex++] = fertilizer;
+        }
     }
 
     public void displayAll() {
         for (int i = 0; i < flowerIndex; i++) {
             //flowers[i].display();
             Flower flower = flowers[i];
-            System.out.println("Name: "+flower.getName());
-            System.out.println("Price: "+flower.getPrice());
-            System.out.println("Type: "+flower.getType());
+            System.out.println("Name: " + flower.getName());
+            System.out.println("Price: " + flower.getPrice());
+            System.out.println("Type: " + flower.getType());
         }
         for (int i = 0; i < fertilizerIndex; i++) {
-            fertilizers[i].display();
+            //fertilizers[i].display();
+            Fertilizer fertilizer = fertilizers[i];
+            System.out.println("Name: " + fertilizer.getName());
+            System.out.println("Price: " + fertilizer.getPrice());
+            System.out.println("Type: " + fertilizer.getPurpose());
         }
-    }
-
-    public void addFertilizer(Fertilizer fertilizer) {
-        fertilizers[fertilizerIndex++] = fertilizer;
     }
 }
 
