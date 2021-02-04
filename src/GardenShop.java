@@ -5,4 +5,10 @@ public class GardenShop {
     public void addFlower(Flower flower) {   //metoda
         flowers[flowerIndex++] = flower; // przypisz flower, flowerIndex++ ->zeby kolejny kwiat w tablicy flowers dodawany otrzymywał kolejny indeks)
     }
+
+    public void displayAll() {
+        for (int i = 0; i < flowerIndex; i++) {
+            flowers[i].display();
+        }
+    }
 }

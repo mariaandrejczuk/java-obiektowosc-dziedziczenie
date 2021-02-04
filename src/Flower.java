@@ -8,4 +8,10 @@ public class Flower {
         this.price = price;
         this.type = type;
     }
+    public void display() {
+        System.out.println("Name: "+name);
+        System.out.println("Price: "+price);
+        System.out.println("Type: "+type);
+
+    }
 }

@@ -22,6 +22,7 @@ public class GardenShopApp {
 
                     System.out.println("Price: ");
                     double price = scanner.nextDouble();
+                    scanner.nextLine(); //bo inaczej nie przechwytuje białego znaku i nie pyta o Type
 
                     System.out.println("Type: ");
                     String type = scanner.nextLine();
@@ -35,6 +36,7 @@ public class GardenShopApp {
                     break;
                 case 3:
 
+                    gardenShop.displayAll();
                     break;
 
             }
