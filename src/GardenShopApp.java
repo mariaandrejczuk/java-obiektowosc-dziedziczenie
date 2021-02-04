@@ -50,12 +50,9 @@ public class GardenShopApp {
                 case 3:
                     gardenShop.displayAll();
                     break;
-
             }
         } while (option != 0);
 
         scanner.close();
-
-
     }
 }

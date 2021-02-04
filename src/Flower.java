@@ -1,4 +1,6 @@
+
 public class Flower {
+
     private String name;  // pola sa ukryte
     private double price;
     private String type;
@@ -8,10 +10,10 @@ public class Flower {
         this.price = price;
         this.type = type;
     }
-    public void display() {
-        System.out.println("Name: "+name);
-        System.out.println("Price: "+price);
-        System.out.println("Type: "+type);
 
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Price: " + price);
+        System.out.println("Type: " + type);
     }
 }
